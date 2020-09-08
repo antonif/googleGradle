@@ -13,10 +13,7 @@ public class Main {
         String name = scan.nextLine();
         classToTest.writeName(name);
 
-        //making simple request
-        HttpRequestFactory requestFactory = new NetHttpTransport().createRequestFactory();
-        HttpRequest request = requestFactory.buildGetRequest(new GenericUrl("https://github.com"));
-        HttpResponse rawResponse = request.execute();
-        System.out.println(rawResponse.getHeaders());
+        //HTTP request to github
+        simpleRequest.simpleRequestToGithub();
     }
 }
